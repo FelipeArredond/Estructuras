@@ -1,17 +1,20 @@
-def main(n):
-    tamaño_arreglo = (2*n)*2
+def main():
+    print("Ingrese un Numero entre 3 y 100")
+    n = int(input())
     i = 0
-    j = 1
-    h = 2
-    #n = int(input)
+    PosA = 2 * n
+    tamaño_arreglo = PosA*2
     lista = []
     while(i < tamaño_arreglo):
-        lista.insert(j,"B")
-        lista.insert(h,"A")
+        if(i < PosA):
+            lista.insert(i, " ")
+        elif(i >= PosA):
+            if(i%2!=0):
+                lista.insert(i, "A")
+            elif(i%2==0):
+                lista.insert(i, "B")
         i = i + 1
-        j = j + 2
-        h = h + 2
-
+    #Print para verificar que el orden inicial sea el correcto
     print(lista)    
 
-main(3)    
+main()    
